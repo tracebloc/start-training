@@ -1,5 +1,5 @@
 # Documentation
-Refer to the [tracebloc documentation](https://docs.tracebloc.io/join-use-case/start-training) to learn how to join a use case and start training.
+Refer to the [tracebloc documentation](https://docs.tracebloc.io/join-use-case/start-training) to learn how to use this repository, join a use case and start training.
 
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
