@@ -1,6 +1,6 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1N00idtpoaq1lk9OJE6g4bMqd8o-Qex2C?usp=sharing) [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE) [![Platform](https://img.shields.io/badge/platform-tracebloc-00C9A7.svg)](https://ai.tracebloc.io)
 
-# tracebloc — Start Training 🚀
+# Start Training 🚀
 
 Launch an ML training experiment on [tracebloc](https://tracebloc.io/) in under 10 minutes. Connect your account, upload a model, link it to a dataset, configure training parameters, and start benchmarking — all from a single notebook.
 
