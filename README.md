@@ -1,72 +1,52 @@
-# Jupyter notebook for Start Training
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1N00idtpoaq1lk9OJE6g4bMqd8o-Qex2C?usp=sharing) [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE) [![Platform](https://img.shields.io/badge/platform-tracebloc-00C9A7.svg)](https://ai.tracebloc.io)
 
-Data scientist tool to create and run experiment with required model and training plan .
+# Start Training 🚀
 
+Launch an ML training experiment on [tracebloc](https://tracebloc.io/) in under 10 minutes. Connect your account, upload a model, link it to a dataset, configure training parameters, and start benchmarking — all from a single notebook.
 
-## Pre-requisite
-### 1. Install Ananconda
-```shell
-wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh 
+## Get started
 
-bash Anaconda3-2020.11-Linux-x86_64.sh -b -p -y 
+### Option A: Google Colab (recommended)
 
-source ~/.bashrc 
-```
-### 2. Create an environment and activate it
-```shell
-conda create -n dsenvironemnt python=3.8 
+No local setup. Click the badge above or:
 
-conda activate dsenvironemnt 
-```
-### 3. Install required package
-```shell
-pip install -r requirement.txt
-```
-### 4. Install tensorflow and keras
-```shell
-pip install tensorflow==2.6.0
-pip install keras==2.6.0
+**👉 [Open in Google Colab](https://colab.research.google.com/drive/1N00idtpoaq1lk9OJE6g4bMqd8o-Qex2C?usp=sharing)**
 
-```
-#### In case of mac m1 machine
+Copy the notebook to your Drive and start running cells.
 
-Follow this link to install tensorflow: https://caffeinedev.medium.com/how-to-install-tensorflow-on-m1-mac-8e9b91d93706
+### Option B: Run locally
 
-or
-
-Enter following commands
-```shell
-conda install -c apple tensorflow-deps
-pip install tensorflow-macos
-pip install tensorflow-metal
-pip uninstall -y numpy
-pip uninstall -y setuptools
-pip install numpy
-pip install setuptools
-```
-### 4. Install Jupyter Notebook
-```shell
-conda install jupyter notebook
-
-pip install jupyter
-```
-### 5. Move to Directory
-```shell
-cd federated-xray-datascientist
-```
-### 6. Start Jupyter Notebook
-```shell
-jupyter notebook
+```bash
+git clone https://github.com/tracebloc/start-training.git
+cd start-training
+pip install tracebloc_package>=0.6.32
+jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
 
+## What the notebook covers
 
-## Testing Jupyter Notebook
-In order to start and test experiment, go through step by step guide [Start Training](https://traceblocdocsdev.azureedge.net/category/start-training)
+| Step | What you do |
+|:---:|---|
+| **1** | Connect to tracebloc with your email + password |
+| **2** | Upload a model from the [model zoo](https://github.com/tracebloc/model-zoo) or your own |
+| **3** | Link it to a dataset from your use case |
+| **4** | Configure training — epochs, batch size, learning rate, augmentation |
+| **5** | Start training — model runs inside your secure Kubernetes environment |
 
-## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Results appear on the use case leaderboard in the [tracebloc web app](https://ai.tracebloc.io/).
 
+## Before you start
 
-## 📞 Support
-For additional support or questions, please refer to our documentation or contact the Tracebloc support team at `support@tracebloc.io`.
+- A **tracebloc account** — [sign up free](https://ai.tracebloc.io/signup)
+- An **active use case** with a dataset — [how to join one](https://docs.tracebloc.io/join-use-case/)
+- A **model file** — grab one from the [model zoo](https://github.com/tracebloc/model-zoo) or [build your own](https://docs.tracebloc.io/join-use-case/model-optimization)
+
+## Links
+
+[Platform](https://ai.tracebloc.io/) · [Docs](https://docs.tracebloc.io/) · [Model zoo](https://github.com/tracebloc/model-zoo) · [PyPI package](https://pypi.org/project/tracebloc-package/) · [Discord](https://discord.gg/tracebloc)
+
+## License
+
+Apache 2.0 — see [LICENSE](LICENSE).
+
+**Need help?** [support@tracebloc.io](mailto:support@tracebloc.io) or [open an issue](https://github.com/tracebloc/start-training/issues).
