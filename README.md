@@ -21,9 +21,9 @@ git clone https://github.com/tracebloc/start-training.git
 cd start-training
 
 # Pick the extra that matches your ML framework:
-pip install "tracebloc_package[pytorch]>=0.6.33"      # most common
-# pip install "tracebloc_package[tensorflow]>=0.6.33" # TensorFlow
-# pip install "tracebloc_package[all]>=0.6.33"        # everything
+pip install "tracebloc_package[pytorch]>=0.7.0"      # most common
+# pip install "tracebloc_package[tensorflow]>=0.7.0" # TensorFlow
+# pip install "tracebloc_package[all]>=0.7.0"        # everything
 
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
