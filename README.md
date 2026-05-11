@@ -19,7 +19,12 @@ Copy the notebook to your Drive and start running cells.
 ```bash
 git clone https://github.com/tracebloc/start-training.git
 cd start-training
-pip install tracebloc_package>=0.6.32
+
+# Pick the extra that matches your ML framework:
+pip install "tracebloc_package[pytorch]>=0.7.0"      # most common
+# pip install "tracebloc_package[tensorflow]>=0.7.0" # TensorFlow
+# pip install "tracebloc_package[all]>=0.7.0"        # everything
+
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
 
