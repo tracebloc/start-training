@@ -18,7 +18,7 @@ Open the Colab link, copy to Drive, and run cells.
 
 ### Locally
 ```bash
-pip install "tracebloc[pytorch]>=0.8.0"
+pip install "tracebloc[pytorch]>=0.8.1"
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
 
