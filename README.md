@@ -21,9 +21,9 @@ git clone https://github.com/tracebloc/start-training.git
 cd start-training
 
 # Pick the extra that matches your ML framework:
-pip install "tracebloc_package[pytorch]>=0.7.0"      # most common
-# pip install "tracebloc_package[tensorflow]>=0.7.0" # TensorFlow
-# pip install "tracebloc_package[all]>=0.7.0"        # everything
+pip install "tracebloc[pytorch]>=0.8.1"      # most common
+# pip install "tracebloc[tensorflow]>=0.8.1" # TensorFlow
+# pip install "tracebloc[all]>=0.8.1"        # everything
 
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
@@ -48,7 +48,7 @@ Results appear on the use case leaderboard in the [tracebloc web app](https://ai
 
 ## Links
 
-[Platform](https://ai.tracebloc.io/) · [Docs](https://docs.tracebloc.io/) · [Model zoo](https://github.com/tracebloc/model-zoo) · [PyPI package](https://pypi.org/project/tracebloc-package/) · [Discord](https://discord.gg/tracebloc)
+[Platform](https://ai.tracebloc.io/) · [Docs](https://docs.tracebloc.io/) · [Model zoo](https://github.com/tracebloc/model-zoo) · [PyPI package](https://pypi.org/project/tracebloc/) · [Discord](https://discord.gg/tracebloc)
 
 ## License
 

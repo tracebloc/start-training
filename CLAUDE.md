@@ -18,7 +18,7 @@ Open the Colab link, copy to Drive, and run cells.
 
 ### Locally
 ```bash
-pip install tracebloc_package>=0.6.32
+pip install "tracebloc[pytorch]>=0.8.1"
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
 
@@ -30,4 +30,6 @@ jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 
 ## Key dependency
 
-`tracebloc_package` (PyPI) -- the Python SDK used in the notebook to authenticate, upload models, and start training.
+[`tracebloc`](https://pypi.org/project/tracebloc/) (PyPI, 0.8.x+) -- the Python SDK used in the notebook to authenticate, upload models, and start training.
+
+> Was published as `tracebloc_package` before 0.8.0. The old install command (`pip install tracebloc_package`) still resolves via a metadata-only redirect on PyPI, but new notebooks should use the canonical `tracebloc` name.
