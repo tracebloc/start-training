@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1N00idtpoaq1lk9OJE6g4bMqd8o-Qex2C?usp=sharing) [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE) [![Platform](https://img.shields.io/badge/platform-tracebloc-00C9A7.svg)](https://ai.tracebloc.io)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tracebloc/start-training/blob/main/notebooks/traceblocTrainingGuide.ipynb) [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE) [![Platform](https://img.shields.io/badge/platform-tracebloc-00C9A7.svg)](https://ai.tracebloc.io)
 
 # Start Training 🚀
 
@@ -10,7 +10,7 @@ Launch an ML training experiment on [tracebloc](https://tracebloc.io/) in under 
 
 No local setup. Click the badge above or:
 
-**👉 [Open in Google Colab](https://colab.research.google.com/drive/1N00idtpoaq1lk9OJE6g4bMqd8o-Qex2C?usp=sharing)**
+**👉 [Open in Google Colab](https://colab.research.google.com/github/tracebloc/start-training/blob/main/notebooks/traceblocTrainingGuide.ipynb)**
 
 Copy the notebook to your Drive and start running cells.
 
@@ -19,7 +19,12 @@ Copy the notebook to your Drive and start running cells.
 ```bash
 git clone https://github.com/tracebloc/start-training.git
 cd start-training
-pip install tracebloc_package>=0.6.32
+
+# Pick the extra that matches your ML framework:
+pip install "tracebloc[pytorch]>=0.8.1"      # most common
+# pip install "tracebloc[tensorflow]>=0.8.1" # TensorFlow
+# pip install "tracebloc[all]>=0.8.1"        # everything
+
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
 
@@ -43,7 +48,7 @@ Results appear on the use case leaderboard in the [tracebloc web app](https://ai
 
 ## Links
 
-[Platform](https://ai.tracebloc.io/) · [Docs](https://docs.tracebloc.io/) · [Model zoo](https://github.com/tracebloc/model-zoo) · [PyPI package](https://pypi.org/project/tracebloc-package/) · [Discord](https://discord.gg/tracebloc)
+[Platform](https://ai.tracebloc.io/) · [Docs](https://docs.tracebloc.io/) · [Model zoo](https://github.com/tracebloc/model-zoo) · [PyPI package](https://pypi.org/project/tracebloc/) · [Discord](https://discord.gg/tracebloc)
 
 ## License
 
