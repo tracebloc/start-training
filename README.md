@@ -1,4 +1,4 @@
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1N00idtpoaq1lk9OJE6g4bMqd8o-Qex2C?usp=sharing) [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE) [![Platform](https://img.shields.io/badge/platform-tracebloc-00C9A7.svg)](https://ai.tracebloc.io)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tracebloc/start-training/blob/main/notebooks/traceblocTrainingGuide.ipynb) [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE) [![Platform](https://img.shields.io/badge/platform-tracebloc-00C9A7.svg)](https://ai.tracebloc.io)
 
 # Start Training 🚀
 
@@ -10,7 +10,7 @@ Launch an ML training experiment on [tracebloc](https://tracebloc.io/) in under 
 
 No local setup. Click the badge above or:
 
-**👉 [Open in Google Colab](https://colab.research.google.com/drive/1N00idtpoaq1lk9OJE6g4bMqd8o-Qex2C?usp=sharing)**
+**👉 [Open in Google Colab](https://colab.research.google.com/github/tracebloc/start-training/blob/main/notebooks/traceblocTrainingGuide.ipynb)**
 
 Copy the notebook to your Drive and start running cells.
 
