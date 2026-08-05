@@ -1,0 +1,32 @@
+name: Code quality
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+
+# Supersede the previous run when a branch is pushed again.
+concurrency:
+  group: code-quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    uses: tracebloc/.github/.github/workflows/code-quality.yml@main
+    with:
+      # Measured 2026-08-04: zero .py and zero .sh in the tree -- 2 notebooks,
+      # 9 workflows, 3 markdown. Both language gates stay off because there is
+      # nothing for them to read, not as a concession.
+      python: false
+      shell: false
+      # gitleaks + house-rules run by default, and gitleaks is the point here:
+      # notebooks carry executed output cells, which is a classic place for a
+      # token or a connection string to be committed without anyone noticing.
+      # This repo had no credential scan at all. See backend#1420.
+    # Passed for consistency across every caller in the fleet. The reusable uses NO
+    # secrets (gitleaks runs from a version+SHA-pinned binary, not the licensed
+    # action), so this is a no-op -- it also clears Cursor Bugbot's recurring false
+    # positive. Fleet-wide decision, backend#1420.
+    secrets: inherit
