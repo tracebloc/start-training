@@ -24,11 +24,20 @@ jobs:
       # Armed 2026-08-06 (backend#1492). Measured zero pin violations on every
       # develop branch first, so this makes a green check stay green rather than
       # importing a backlog. Soft-fail let #1449 add a second unpinned call site
-      # of an action while #1446 was open to pin it. Independent of soft-fail
-      # above: this repo's other jobs keep whatever posture they have.
+      # of an action while #1446 was open to pin it. Both this and `soft-fail`
+      # below are now false, so the pin check is armed either way.
       action-pins: true
       action-pins-soft-fail: false
       # gitleaks + house-rules run by default, and gitleaks is the point here:
       # notebooks carry executed output cells, which is a classic place for a
       # token or a connection string to be committed without anyone noticing.
       # This repo had no credential scan at all. See backend#1420.
+      # ARMED 2026-08-11 (backend#1681). Until now `soft-fail` was left at its
+      # default of TRUE, so every job here -- including the credential scan --
+      # reported findings and then exited 0. On this repo gitleaks and
+      # house-rules are REQUIRED status checks, i.e. required checks that could
+      # not fail. backend#1303 ("flip code-quality to required per repo once its
+      # backlog is clean") closed 2026-07-31, and the most recent run reports
+      # zero real findings for gitleaks, house-rules and action-pins -- so this
+      # arms a green check rather than importing a backlog.
+      soft-fail: false
