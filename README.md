@@ -22,7 +22,7 @@ cd start-training
 
 # Pick the extra that matches your ML framework:
 pip install "tracebloc[pytorch]>=0.8.1"      # most common
-# pip install "tracebloc[tensorflow]>=0.8.1" # TensorFlow
+# pip install "tracebloc[tensorflow]>=0.8.1" # TensorFlow (deprecated — no new uploads; removed in 1.0.0)
 # pip install "tracebloc[all]>=0.8.1"        # everything
 
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
