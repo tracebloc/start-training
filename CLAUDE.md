@@ -34,14 +34,21 @@ pip install "tracebloc[pytorch]>=0.14.0"
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
 
-On **Python 3.11-3.14** (the SDK's `requires-python`). An out-of-range
+The supported Python range is whatever the installed SDK's `requires-python`
+declares -- do NOT restate it here or in the notebook. An out-of-range
 interpreter fails as `No matching distribution found for tracebloc`, which
-looks like a missing package and is not one -- the notebook's preflight cell
-exists to say which it is (backend#2862).
+looks like a missing package and is not one. The install cell runs pip and
+reports pip's own `Requires-Python` line, so the range has exactly one source.
+
+An earlier version of that cell asserted a hardcoded `3.11-3.14` before
+installing; it was a second copy of a bound living in another repo, it went
+stale against published releases, and it printed "OK" to a 3.14 user whose
+install then failed. Deriving beats restating (backend#2862,
+start-training#83).
 
 ## Prerequisites
 
-- Python 3.11-3.14
+- A Python the SDK supports (its `requires-python`; the install cell reports it)
 - A tracebloc account
 - An active use case with a dataset
 - A model file (from the [model-zoo](https://github.com/tracebloc/model-zoo) repo or custom)
