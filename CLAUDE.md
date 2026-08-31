@@ -8,7 +8,19 @@ Jupyter notebook quick-start guide for running ML training experiments on the tr
 
 ## Notebook locations
 
-- `notebooks/traceblocTrainingGuide.ipynb` -- main training guide (also available on [Google Colab](https://colab.research.google.com/drive/1N00idtpoaq1lk9OJE6g4bMqd8o-Qex2C?usp=sharing))
+- `notebooks/traceblocTrainingGuide.ipynb` -- main training guide. Open it in
+  Colab straight from this repo:
+  [colab.research.google.com/github/tracebloc/start-training/…](https://colab.research.google.com/github/tracebloc/start-training/blob/main/notebooks/traceblocTrainingGuide.ipynb)
+  (tracks `main`, so a merged fix reaches users on the next promotion).
+
+  > There is also a Drive-hosted copy,
+  > [`drive/1N00idt…`](https://colab.research.google.com/drive/1N00idtpoaq1lk9OJE6g4bMqd8o-Qex2C?usp=sharing),
+  > which the web app's "Start training" button still points at. It is **not**
+  > version-controlled: nothing in this repo can change it, so a fix landed
+  > here does not reach that copy. Either the button is repointed at the
+  > GitHub-backed URL above (tracebloc/frontend-app), or someone with Drive
+  > access re-uploads this notebook on every change. Until one of those
+  > happens, assume the Drive copy is stale (backend#2862).
 - `notebooks/GenerateCheckWeights.ipynb` -- utility for generating/checking model weights
 
 ## How users run it
@@ -18,12 +30,18 @@ Open the Colab link, copy to Drive, and run cells.
 
 ### Locally
 ```bash
-pip install "tracebloc[pytorch]>=0.8.1"
+pip install "tracebloc[pytorch]>=0.14.0"
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
 
+On **Python 3.11-3.14** (the SDK's `requires-python`). An out-of-range
+interpreter fails as `No matching distribution found for tracebloc`, which
+looks like a missing package and is not one -- the notebook's preflight cell
+exists to say which it is (backend#2862).
+
 ## Prerequisites
 
+- Python 3.11-3.14
 - A tracebloc account
 - An active use case with a dataset
 - A model file (from the [model-zoo](https://github.com/tracebloc/model-zoo) repo or custom)

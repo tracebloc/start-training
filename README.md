@@ -21,12 +21,23 @@ git clone https://github.com/tracebloc/start-training.git
 cd start-training
 
 # Pick the extra that matches your ML framework:
-pip install "tracebloc[pytorch]>=0.8.1"      # most common
-# pip install "tracebloc[tensorflow]>=0.8.1" # TensorFlow (deprecated — no new uploads; removed in 1.0.0)
-# pip install "tracebloc[all]>=0.8.1"        # everything
+pip install "tracebloc[pytorch]>=0.14.0"  # most common
+# pip install "tracebloc[sklearn]>=0.14.0" # scikit-learn / boosting
+# pip install "tracebloc[all]>=0.14.0"     # everything
 
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
+
+Needs **Python 3.11–3.14**. If pip answers `No matching distribution found for
+tracebloc`, check `python3 --version` before anything else: that message means
+your interpreter is outside the SDK's supported range, not that the package is
+missing. On macOS the default `python3` from Homebrew or python.org is ahead of
+that range often enough to be worth checking first. The notebook's first cell
+checks this for you and says so.
+
+TensorFlow uploads were removed in SDK 1.0.0, so there is no `[tensorflow]`
+extra — the extras are `[pytorch]`, `[sklearn]`, `[catboost]`, `[lightgbm]`,
+`[xgboost]`, `[lifelines]`, `[scikit-survival]` and `[all]`.
 
 ## What the notebook covers
 
