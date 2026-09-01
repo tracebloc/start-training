@@ -21,12 +21,30 @@ git clone https://github.com/tracebloc/start-training.git
 cd start-training
 
 # Pick the extra that matches your ML framework:
-pip install "tracebloc[pytorch]>=0.8.1"      # most common
-# pip install "tracebloc[tensorflow]>=0.8.1" # TensorFlow (deprecated — no new uploads; removed in 1.0.0)
-# pip install "tracebloc[all]>=0.8.1"        # everything
+pip install "tracebloc[pytorch]>=0.14.0"  # most common
+# pip install "tracebloc[sklearn]>=0.14.0" # scikit-learn / boosting
+# pip install "tracebloc[all]>=0.14.0"     # everything
 
 jupyter notebook notebooks/traceblocTrainingGuide.ipynb
 ```
+
+**Which Pythons work:** whatever the SDK's own package metadata declares — see
+[`tracebloc` on PyPI](https://pypi.org/project/tracebloc/). This README
+deliberately does not repeat the range; a copy here would go stale against the
+package, which is exactly the failure this notebook was fixed for
+(backend#2862).
+
+If pip answers `No matching distribution found for tracebloc`, that most often
+means your interpreter is outside that range rather than the package being
+missing — but it can also mean an unreachable index or a custom `--index-url`.
+The install cell prints pip's own answer either way: on failure it shows the
+range pip actually read alongside the Python you are on. On macOS the default
+`python3` is frequently *ahead* of the supported range, so check
+`python3 --version` first when running locally.
+
+TensorFlow uploads were removed in SDK 1.0.0, so there is no `[tensorflow]`
+extra — the extras are `[pytorch]`, `[sklearn]`, `[catboost]`, `[lightgbm]`,
+`[xgboost]`, `[lifelines]`, `[scikit-survival]` and `[all]`.
 
 ## What the notebook covers
 
